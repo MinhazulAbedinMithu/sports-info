@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import NavItems from "./NavItems";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 const Header = () => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -13,26 +14,12 @@ const Header = () => {
 				className="flex justify-between text-black h-16 font-mono relative shadow-sm items-center py-4 bg-white-300"
 				role="navigation"
 			>
-				<Link to="/">Sports Info</Link>
+				<Link to="/" className="text-3xl font-bold">Sports Info</Link>
 				<div
-					className="menu-icon md:hidden block cursor-pointer bg-yellow-300 p-2"
+					className="menu-icon md:hidden block cursor-pointer bg-yellow-300 p-2 text-3xl"
 					onClick={handleToggle}
 				>
-					<svg
-						className="text-4xl"
-						xmlns="http://www.w3.org/2000/svg"
-						className="h-6 w-6"
-						fill="none"
-						viewBox="0 0 24 24"
-						stroke="currentColor"
-					>
-						<path
-							strokeLinecap="round"
-							strokeLinejoin="round"
-							strokeWidth={2}
-							d="M4 6h16M4 12h16M4 18h16"
-						/>
-					</svg>
+					<GiHamburgerMenu />
 				</div>
 				<div className="hidden md:block">
 					<NavItems />

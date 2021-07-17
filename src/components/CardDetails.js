@@ -33,8 +33,7 @@ const CardDetails = () => {
 		strInstagram,
 		strTwitter,
 		strDescriptionEN,
-		strTeamBadge,
-		strTeamBanner,
+		strTeamBadge
 	} = team;
 	return (
 		<div>
